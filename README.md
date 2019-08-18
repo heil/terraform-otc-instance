@@ -6,3 +6,6 @@ Terraform modules to provide instances in otc.
 
 Terraform modules to provide instances in otc without any provision except cloud-init.
 
+## Module terraform-otc-instance - block
+
+Terraform modules to provide instances in otc with one block-device but without any provision except cloud-init.
