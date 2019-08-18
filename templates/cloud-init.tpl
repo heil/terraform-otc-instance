@@ -9,7 +9,7 @@ packages:
   - curl
   - wget
 users:
-  - name: ubuntu
+  - name: administrator
     groups: sudo
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']

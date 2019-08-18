@@ -1,3 +1,8 @@
+variable "associate_public_ip_address" {
+  description = "Wether to associate a public IP address with an instance in a VPC."
+  default     = false
+}
+
 variable "attributes" {
   type        = list(string)
   default     = []
@@ -40,7 +45,6 @@ variable "hostname" {
   type        = "string"
 }
 
-
 variable "enabled" {
   description = "is this module enabled"
   type        = bool
@@ -58,10 +62,6 @@ variable "private_ip" {
   default     = ""
 }
 
-variable "associate_public_ip_address" {
-  description = "Wether to associate a public IP address with an instance in a VPC."
-  default     = false
-}
 variable "tags" {
   type        = map(string)
   default     = {}

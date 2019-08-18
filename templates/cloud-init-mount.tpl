@@ -1,9 +1,15 @@
 #cloud-config
-mounts:
-    - [ ${mount_device != "" ? mount_device : device}, "${mount_point}" ]
+disk_setup:
+  ${device}:
+    table_type: 'mbr'
+    layout:
+      - 100
+    overwrite: false
 
 fs_setup:
-    -   device: ${mount_device != "" ? mount_device : device}
-        partition: none
-        label: ${label}
-        filesystem: ${filesystem}
+  - label: ${label != "" ? label : "data"}
+    filesystem: ${filesystem}
+    overwrite: false
+
+mounts:
+  - [ ${device}1, "${mount_point}" ]
