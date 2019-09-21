@@ -15,6 +15,12 @@ variable "boot_volume_type" {
   description = "can be SATA, SAS, SSD"
 }
 
+variable "availability_zone" {
+  type        = string
+  description = "can be eu-de-01 eu-de-02 eu-de-03"
+  default     = ""
+}
+
 variable "boot_volume_size" {
   type        = string
   description = "Size of the Boot-Volume in GB"

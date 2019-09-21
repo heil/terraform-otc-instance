@@ -73,7 +73,8 @@ resource "opentelekomcloud_compute_instance_v2" "mod" {
 
   name = join(var.delimiter, [terraform.workspace, var.hostname])
 
-  flavor_name = var.flavor_name
+  availability_zone = var.availability_zone
+  flavor_name       = var.flavor_name
   #image_id    = var.image_id
   key_pair = var.key_pair
 
