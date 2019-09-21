@@ -22,7 +22,7 @@ data "template_file" "init_mount_mod" {
   template = "${file("${path.module}/../templates/cloud-init-mount.tpl")}"
 
   vars = {
-    device      = "/dev/vdb"
+    device      = "${volume_device}"
     mount_point = var.volume_mount_point
     filesystem  = var.volume_filesystem
     label       = var.volume_name
