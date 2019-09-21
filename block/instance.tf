@@ -61,8 +61,9 @@ resource "opentelekomcloud_compute_floatingip_associate_v2" "fip_1" {
 }
 
 resource "opentelekomcloud_blockstorage_volume_v2" "mod" {
-  name = var.volume_name
-  size = var.volume_size
+  name              = var.volume_name
+  availability_zone = var.availability_zone
+  size              = var.volume_size
   tags = {
     Name = var.volume_name
   }
